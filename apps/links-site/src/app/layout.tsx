@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="bg-zinc-900">
+    <html lang="pt-BR" className="bg-offwhite">
       <body>{children}</body>
     </html>
   );

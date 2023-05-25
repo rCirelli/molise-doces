@@ -5,15 +5,21 @@ module.exports = {
     // app content
     `src/**/*.{js,ts,jsx,tsx}`,
     // include packages if not transpiling
-    // "../../packages/**/*.{js,ts,jsx,tsx}",
+    "../../packages/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        brandblue: colors.blue[500],
-        brandred: colors.red[500],
+        'molisePink': '#FFDFE7',
+        'moliseBrown': '#643819',
+        'offwhite': '#FCFCFD',
       },
     },
   },
+  safelist: [
+    'molisePink',
+    'moliseBrown',
+    'offwhite',
+  ],
   plugins: [],
 };
