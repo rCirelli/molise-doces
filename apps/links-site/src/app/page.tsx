@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import moliseLogo from '../../public/img/molise-logo.png';
 import LinkList from '../components/LinkList';
+import { SocialIcons } from 'ui';
 
 export const metadata: Metadata = {
   title: 'Molise Doces',
@@ -10,29 +11,24 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center pb-2 bg-gradient-to-b from-molisePink to-pink-300">
-      <header className="w-full h-1/6 py-6 flex justify-center">
-        <Image alt="Molise Doces" src={moliseLogo} width={200} />
+      <header className="w-full h-1/6 pt-14 flex flex-col justify-center items-center gap-14">
+        <Image alt="Molise Doces" src={moliseLogo} width={300} />
+        <SocialIcons icons={['instagram']} />
       </header>
-      <main className="flex-grow mx-auto w-full flex justify-center px-8 pt-8 pb-8 sm:pt-24 lg:px-8">
+      <main className="flex-grow mx-auto w-full flex flex-col justify-center items-center px-8 pb-8 lg:px-8">
         <LinkList
           links={[
             {
-              label: 'visite nosso site',
-              url: '#',
+              label: 'Cardápio',
+              url: '/Menu - Molise Doces.pdf',
               image:
-                'https://i.pinimg.com/originals/11/f2/fd/11f2fd963a2028fa67ce38ffe0e92bc5.png',
+                'https://fav.farm/🍫',
             },
             {
-              label: 'acesse nossa loja',
-              url: '#',
+              label: 'Faça seu pedido no Whatsapp',
+              url: 'https://wa.me/5511957898248?text=Ol%C3%A1!%20Quero%20fazer%20uma%20encomenda!',
               image:
-                'https://i.pinimg.com/originals/11/f2/fd/11f2fd963a2028fa67ce38ffe0e92bc5.png',
-            },
-            {
-              label: 'entre em contato',
-              url: '#',
-              image:
-                'https://i.pinimg.com/originals/11/f2/fd/11f2fd963a2028fa67ce38ffe0e92bc5.png',
+                '/img/whatsapp_icon.svg',
             },
           ]}
         />
