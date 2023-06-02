@@ -6,7 +6,7 @@
     "lint": "turbo lint",
     "clean": "turbo clean",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "wp": "docker compose up -d"
+    "wp:up": "docker compose up -d"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

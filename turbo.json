@@ -15,7 +15,7 @@
     "clean": {
       "cache": false
     },
-    "wp": {
+    "//#wp:up": {
       "cache": false
     }
   }
