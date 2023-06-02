@@ -1,0 +1,33 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:8.0.27
+    command: '--default-authentication-plugin=mysql_native_password'
+    env_file:
+      - .env.wordpress.local
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - wp_network
+    restart: always
+    ports:
+      - 33060:3306
+
+  wordpress:
+    image: wordpress:6.2.2
+    env_file:
+      - .env.wordpress.local
+    volumes:
+      - wp_data:/var/www/html
+    networks:
+      - wp_network
+    ports:
+      - 8000:80
+    restart: always
+volumes:
+  db_data:
+  wp_data:
+networks:
+  wp_network:
+    driver: bridge
